@@ -1,12 +1,12 @@
 
 
-# Write-Information('---step4---')
+Write-Information('---step4---')
 
-# docker build -f src/AZ_SSOTest.Web/Dockerfile -t ic/leave-vnext .
+docker build -f src/AZ_SSOTest.Web/Dockerfile -t ic/leave-vnext .
 
-# Write-Information('---step5---')
-# docker tag ic/leave-vnext:latest registry.ic-digital.cn/temp/ic/leave-vnext
-# docker push registry.ic-digital.cn/temp/ic/leave-vnext
+Write-Information('---step5---')
+docker tag ic/leave-vnext:latest registry.ic-digital.cn/temp/ic/leave-vnext
+docker push registry.ic-digital.cn/temp/ic/leave-vnext
 
 Write-Information('---step6---')
 docker -H tcp://192.168.100.111:2375 info
